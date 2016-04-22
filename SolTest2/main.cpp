@@ -16,14 +16,19 @@
 
 #include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
+#include <iostream>
+#include "sol.hpp"
+//#include "lua.hpp"
 
 // Here is a small helper for you ! Have a look.
 #include "ResourcePath.hpp"
 
+
+
 int main(int, char const**)
 {
     // Create the main window
-    sf::RenderWindow window(sf::VideoMode(800, 600), "SFML window");
+    sf::RenderWindow window(sf::VideoMode(1600, 1200), "SFML window");
 
     // Set the Icon
     sf::Image icon;
@@ -34,10 +39,24 @@ int main(int, char const**)
 
     // Load a sprite to display
     sf::Texture texture;
-    if (!texture.loadFromFile(resourcePath() + "cute_image.jpg")) {
+    if (!texture.loadFromFile(resourcePath() + "girlWalk.png")) {
         return EXIT_FAILURE;
     }
-    sf::Sprite sprite(texture);
+    
+    
+    
+    
+    
+    //sf::Sprite sprite(texture);
+    sf::IntRect rectSourceSprite(0,0,59,64);
+    
+    sf::Sprite sprite(texture, rectSourceSprite);
+    //sprite.setTextureRect(sf::IntRect(0,0,59,64));
+    sprite.setPosition(800,600);
+    
+    sf::Vector2f bgVector(1600.f,1200.f);
+    sf::RectangleShape bg(bgVector);
+    bg.setFillColor(sf::Color::Blue);
 
     // Create a graphical text to display
     sf::Font font;
@@ -47,22 +66,50 @@ int main(int, char const**)
     sf::Text text("Hello SFML", font, 50);
     text.setColor(sf::Color::Black);
 
-    // Load a music to play
-    sf::Music music;
-    if (!music.openFromFile(resourcePath() + "nice_music.ogg")) {
-        return EXIT_FAILURE;
-    }
 
-    // Play the music
-    music.play();
-
+    sf::Clock clock;
+    
     // Start the game loop
     while (window.isOpen())
     {
+        
+        //girl is constantly animating
+        //sf::Time t1 = sf::seconds(.5f);
+        
+//        int time1 = (int)clock.getElapsedTime().asSeconds();
+//        
+//        if (time1%2 == 0){
+//            std::out
+//            sprite.setTextureRect(sf::IntRect(59,0,59,64));
+//        }
+//        else{
+//            sprite.setTextureRect(sf::IntRect(0,0,59,64));
+//        }
+        
         // Process events
+        
+        //update animation very 1 second
+        if (clock.getElapsedTime().asSeconds() > 0.3f){
+            if (rectSourceSprite.left == 59){
+                //std::cout << "hi ";
+                rectSourceSprite.left = 0;
+            }else{
+                rectSourceSprite.left = 59;
+                //std::cout << "bye ";
+            }
+            
+            sprite.setTextureRect(rectSourceSprite);
+            
+            clock.restart();
+            
+        }
+
+        
         sf::Event event;
         while (window.pollEvent(event))
         {
+            
+            
             // Close window: exit
             if (event.type == sf::Event::Closed) {
                 window.close();
@@ -72,20 +119,28 @@ int main(int, char const**)
             if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape) {
                 window.close();
             }
+            
         }
 
         // Clear screen
         window.clear();
 
+        window.draw(bg);
+        
         // Draw the sprite
         window.draw(sprite);
 
         // Draw the string
-        window.draw(text);
+        //window.draw(text);
+        
 
         // Update the window
         window.display();
     }
-
+    
+    sol::state lua;
+    lua.open_libraries( sol::lib::base );
+    
+    lua.script( "print('bark bark bark!')" );
     return EXIT_SUCCESS;
 }

@@ -13,6 +13,17 @@
 		030970EE1CBD619D003385B3 /* nice_music.ogg in Resources */ = {isa = PBXBuildFile; fileRef = 030970ED1CBD619D003385B3 /* nice_music.ogg */; };
 		030970F01CBD619D003385B3 /* sansation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 030970EF1CBD619D003385B3 /* sansation.ttf */; };
 		030970F21CBD619D003385B3 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 030970F11CBD619D003385B3 /* icon.png */; };
+		0309713C1CBD62DE003385B3 /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = 030970F91CBD62DE003385B3 /* CMakeLists.txt */; };
+		0309713D1CBD62DE003385B3 /* copyright.txt in Resources */ = {isa = PBXBuildFile; fileRef = 030970FA1CBD62DE003385B3 /* copyright.txt */; };
+		0309713E1CBD62DE003385B3 /* LICENSE_1_0.txt in Resources */ = {isa = PBXBuildFile; fileRef = 030970FB1CBD62DE003385B3 /* LICENSE_1_0.txt */; };
+		0309713F1CBD62DE003385B3 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 030970FD1CBD62DE003385B3 /* README.md */; };
+		030971421CBD62DE003385B3 /* 5.x.x.inl in Resources */ = {isa = PBXBuildFile; fileRef = 030971061CBD62DE003385B3 /* 5.x.x.inl */; };
+		030971D71CBD641D003385B3 /* liblua.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0309715A1CBD641D003385B3 /* liblua.a */; };
+		030971D81CBD641D003385B3 /* lua.1 in Resources */ = {isa = PBXBuildFile; fileRef = 0309715F1CBD641D003385B3 /* lua.1 */; };
+		030971D91CBD641D003385B3 /* luac.1 in Resources */ = {isa = PBXBuildFile; fileRef = 030971601CBD641D003385B3 /* luac.1 */; };
+		030971DA1CBD641D003385B3 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 030971641CBD641D003385B3 /* Makefile */; };
+		030971DB1CBD641D003385B3 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 030971651CBD641D003385B3 /* README */; };
+		0309724F1CC2E4C9003385B3 /* girlWalk.png in Resources */ = {isa = PBXBuildFile; fileRef = 0309724E1CC2E4C9003385B3 /* girlWalk.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +36,80 @@
 		030970ED1CBD619D003385B3 /* nice_music.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = nice_music.ogg; sourceTree = "<group>"; };
 		030970EF1CBD619D003385B3 /* sansation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sansation.ttf; sourceTree = "<group>"; };
 		030970F11CBD619D003385B3 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		030970F91CBD62DE003385B3 /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
+		030970FA1CBD62DE003385B3 /* copyright.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = copyright.txt; sourceTree = "<group>"; };
+		030970FB1CBD62DE003385B3 /* LICENSE_1_0.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE_1_0.txt; sourceTree = "<group>"; };
+		030970FC1CBD62DE003385B3 /* optional.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = optional.hpp; sourceTree = "<group>"; };
+		030970FD1CBD62DE003385B3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		030971011CBD62DE003385B3 /* bond.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = bond.hpp; sourceTree = "<group>"; };
+		030971031CBD62DE003385B3 /* 5.0.0.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 5.0.0.h; sourceTree = "<group>"; };
+		030971041CBD62DE003385B3 /* 5.1.0.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 5.1.0.h; sourceTree = "<group>"; };
+		030971051CBD62DE003385B3 /* 5.x.x.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 5.x.x.h; sourceTree = "<group>"; };
+		030971061CBD62DE003385B3 /* 5.x.x.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 5.x.x.inl; sourceTree = "<group>"; };
+		030971071CBD62DE003385B3 /* version.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = version.hpp; sourceTree = "<group>"; };
+		030971081CBD62DE003385B3 /* compatibility.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = compatibility.hpp; sourceTree = "<group>"; };
+		030971091CBD62DE003385B3 /* coroutine.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = coroutine.hpp; sourceTree = "<group>"; };
+		0309710A1CBD62DE003385B3 /* debug.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = debug.hpp; sourceTree = "<group>"; };
+		0309710B1CBD62DE003385B3 /* demangle.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = demangle.hpp; sourceTree = "<group>"; };
+		0309710C1CBD62DE003385B3 /* deprecate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = deprecate.hpp; sourceTree = "<group>"; };
+		0309710D1CBD62DE003385B3 /* error.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = error.hpp; sourceTree = "<group>"; };
+		0309710E1CBD62DE003385B3 /* function.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = function.hpp; sourceTree = "<group>"; };
+		0309710F1CBD62DE003385B3 /* function_result.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = function_result.hpp; sourceTree = "<group>"; };
+		030971101CBD62DE003385B3 /* function_types.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = function_types.hpp; sourceTree = "<group>"; };
+		030971111CBD62DE003385B3 /* function_types_allocator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = function_types_allocator.hpp; sourceTree = "<group>"; };
+		030971121CBD62DE003385B3 /* function_types_basic.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = function_types_basic.hpp; sourceTree = "<group>"; };
+		030971131CBD62DE003385B3 /* function_types_core.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = function_types_core.hpp; sourceTree = "<group>"; };
+		030971141CBD62DE003385B3 /* function_types_member.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = function_types_member.hpp; sourceTree = "<group>"; };
+		030971151CBD62DE003385B3 /* function_types_overload.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = function_types_overload.hpp; sourceTree = "<group>"; };
+		030971161CBD62DE003385B3 /* function_types_templated.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = function_types_templated.hpp; sourceTree = "<group>"; };
+		030971171CBD62DE003385B3 /* function_types_usertype.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = function_types_usertype.hpp; sourceTree = "<group>"; };
+		030971181CBD62DE003385B3 /* inheritance.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = inheritance.hpp; sourceTree = "<group>"; };
+		030971191CBD62DE003385B3 /* object.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = object.hpp; sourceTree = "<group>"; };
+		0309711A1CBD62DE003385B3 /* optional.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = optional.hpp; sourceTree = "<group>"; };
+		0309711B1CBD62DE003385B3 /* overload.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = overload.hpp; sourceTree = "<group>"; };
+		0309711C1CBD62DE003385B3 /* protected_function.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = protected_function.hpp; sourceTree = "<group>"; };
+		0309711D1CBD62DE003385B3 /* protected_function_result.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = protected_function_result.hpp; sourceTree = "<group>"; };
+		0309711E1CBD62DE003385B3 /* proxy.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = proxy.hpp; sourceTree = "<group>"; };
+		0309711F1CBD62DE003385B3 /* proxy_base.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = proxy_base.hpp; sourceTree = "<group>"; };
+		030971201CBD62DE003385B3 /* raii.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = raii.hpp; sourceTree = "<group>"; };
+		030971211CBD62DE003385B3 /* reference.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = reference.hpp; sourceTree = "<group>"; };
+		030971221CBD62DE003385B3 /* resolve.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = resolve.hpp; sourceTree = "<group>"; };
+		030971231CBD62DE003385B3 /* stack.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = stack.hpp; sourceTree = "<group>"; };
+		030971241CBD62DE003385B3 /* stack_check.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = stack_check.hpp; sourceTree = "<group>"; };
+		030971251CBD62DE003385B3 /* stack_check_get.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = stack_check_get.hpp; sourceTree = "<group>"; };
+		030971261CBD62DE003385B3 /* stack_core.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = stack_core.hpp; sourceTree = "<group>"; };
+		030971271CBD62DE003385B3 /* stack_field.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = stack_field.hpp; sourceTree = "<group>"; };
+		030971281CBD62DE003385B3 /* stack_get.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = stack_get.hpp; sourceTree = "<group>"; };
+		030971291CBD62DE003385B3 /* stack_guard.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = stack_guard.hpp; sourceTree = "<group>"; };
+		0309712A1CBD62DE003385B3 /* stack_pop.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = stack_pop.hpp; sourceTree = "<group>"; };
+		0309712B1CBD62DE003385B3 /* stack_probe.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = stack_probe.hpp; sourceTree = "<group>"; };
+		0309712C1CBD62DE003385B3 /* stack_proxy.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = stack_proxy.hpp; sourceTree = "<group>"; };
+		0309712D1CBD62DE003385B3 /* stack_push.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = stack_push.hpp; sourceTree = "<group>"; };
+		0309712E1CBD62DE003385B3 /* stack_reference.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = stack_reference.hpp; sourceTree = "<group>"; };
+		0309712F1CBD62DE003385B3 /* state.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = state.hpp; sourceTree = "<group>"; };
+		030971301CBD62DE003385B3 /* state_view.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = state_view.hpp; sourceTree = "<group>"; };
+		030971311CBD62DE003385B3 /* table.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = table.hpp; sourceTree = "<group>"; };
+		030971321CBD62DE003385B3 /* table_core.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = table_core.hpp; sourceTree = "<group>"; };
+		030971331CBD62DE003385B3 /* table_iterator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = table_iterator.hpp; sourceTree = "<group>"; };
+		030971341CBD62DE003385B3 /* thread.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = thread.hpp; sourceTree = "<group>"; };
+		030971351CBD62DE003385B3 /* traits.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = traits.hpp; sourceTree = "<group>"; };
+		030971361CBD62DE003385B3 /* tuple.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = tuple.hpp; sourceTree = "<group>"; };
+		030971371CBD62DE003385B3 /* types.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = types.hpp; sourceTree = "<group>"; };
+		030971381CBD62DE003385B3 /* userdata.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = userdata.hpp; sourceTree = "<group>"; };
+		030971391CBD62DE003385B3 /* usertype.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = usertype.hpp; sourceTree = "<group>"; };
+		0309713A1CBD62DE003385B3 /* usertype_traits.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = usertype_traits.hpp; sourceTree = "<group>"; };
+		0309713B1CBD62DE003385B3 /* sol.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = sol.hpp; path = SolTest2/sol.hpp; sourceTree = "<group>"; };
+		030971541CBD641D003385B3 /* lauxlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lauxlib.h; sourceTree = "<group>"; };
+		030971551CBD641D003385B3 /* lua.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lua.h; sourceTree = "<group>"; };
+		030971561CBD641D003385B3 /* lua.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lua.hpp; sourceTree = "<group>"; };
+		030971571CBD641D003385B3 /* luaconf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = luaconf.h; sourceTree = "<group>"; };
+		030971581CBD641D003385B3 /* lualib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lualib.h; sourceTree = "<group>"; };
+		0309715A1CBD641D003385B3 /* liblua.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = liblua.a; sourceTree = "<group>"; };
+		0309715F1CBD641D003385B3 /* lua.1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.man; path = lua.1; sourceTree = "<group>"; };
+		030971601CBD641D003385B3 /* luac.1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.man; path = luac.1; sourceTree = "<group>"; };
+		030971641CBD641D003385B3 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		030971651CBD641D003385B3 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		0309724E1CC2E4C9003385B3 /* girlWalk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = girlWalk.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				030971D71CBD641D003385B3 /* liblua.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +127,10 @@
 		030970D61CBD619D003385B3 = {
 			isa = PBXGroup;
 			children = (
+				030971431CBD641D003385B3 /* lua-5.3.2 */,
+				030970F81CBD62DE003385B3 /* Optional */,
+				030971001CBD62DE003385B3 /* sol */,
+				0309713B1CBD62DE003385B3 /* sol.hpp */,
 				030970E21CBD619D003385B3 /* SolTest2 */,
 				030970E11CBD619D003385B3 /* Products */,
 			);
@@ -77,12 +167,196 @@
 		030970EA1CBD619D003385B3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0309724E1CC2E4C9003385B3 /* girlWalk.png */,
 				030970EB1CBD619D003385B3 /* cute_image.jpg */,
 				030970ED1CBD619D003385B3 /* nice_music.ogg */,
 				030970EF1CBD619D003385B3 /* sansation.ttf */,
 				030970F11CBD619D003385B3 /* icon.png */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		030970F81CBD62DE003385B3 /* Optional */ = {
+			isa = PBXGroup;
+			children = (
+				030970F91CBD62DE003385B3 /* CMakeLists.txt */,
+				030970FA1CBD62DE003385B3 /* copyright.txt */,
+				030970FB1CBD62DE003385B3 /* LICENSE_1_0.txt */,
+				030970FC1CBD62DE003385B3 /* optional.hpp */,
+				030970FD1CBD62DE003385B3 /* README.md */,
+			);
+			name = Optional;
+			path = SolTest2/Optional;
+			sourceTree = "<group>";
+		};
+		030971001CBD62DE003385B3 /* sol */ = {
+			isa = PBXGroup;
+			children = (
+				030971011CBD62DE003385B3 /* bond.hpp */,
+				030971021CBD62DE003385B3 /* compatibility */,
+				030971081CBD62DE003385B3 /* compatibility.hpp */,
+				030971091CBD62DE003385B3 /* coroutine.hpp */,
+				0309710A1CBD62DE003385B3 /* debug.hpp */,
+				0309710B1CBD62DE003385B3 /* demangle.hpp */,
+				0309710C1CBD62DE003385B3 /* deprecate.hpp */,
+				0309710D1CBD62DE003385B3 /* error.hpp */,
+				0309710E1CBD62DE003385B3 /* function.hpp */,
+				0309710F1CBD62DE003385B3 /* function_result.hpp */,
+				030971101CBD62DE003385B3 /* function_types.hpp */,
+				030971111CBD62DE003385B3 /* function_types_allocator.hpp */,
+				030971121CBD62DE003385B3 /* function_types_basic.hpp */,
+				030971131CBD62DE003385B3 /* function_types_core.hpp */,
+				030971141CBD62DE003385B3 /* function_types_member.hpp */,
+				030971151CBD62DE003385B3 /* function_types_overload.hpp */,
+				030971161CBD62DE003385B3 /* function_types_templated.hpp */,
+				030971171CBD62DE003385B3 /* function_types_usertype.hpp */,
+				030971181CBD62DE003385B3 /* inheritance.hpp */,
+				030971191CBD62DE003385B3 /* object.hpp */,
+				0309711A1CBD62DE003385B3 /* optional.hpp */,
+				0309711B1CBD62DE003385B3 /* overload.hpp */,
+				0309711C1CBD62DE003385B3 /* protected_function.hpp */,
+				0309711D1CBD62DE003385B3 /* protected_function_result.hpp */,
+				0309711E1CBD62DE003385B3 /* proxy.hpp */,
+				0309711F1CBD62DE003385B3 /* proxy_base.hpp */,
+				030971201CBD62DE003385B3 /* raii.hpp */,
+				030971211CBD62DE003385B3 /* reference.hpp */,
+				030971221CBD62DE003385B3 /* resolve.hpp */,
+				030971231CBD62DE003385B3 /* stack.hpp */,
+				030971241CBD62DE003385B3 /* stack_check.hpp */,
+				030971251CBD62DE003385B3 /* stack_check_get.hpp */,
+				030971261CBD62DE003385B3 /* stack_core.hpp */,
+				030971271CBD62DE003385B3 /* stack_field.hpp */,
+				030971281CBD62DE003385B3 /* stack_get.hpp */,
+				030971291CBD62DE003385B3 /* stack_guard.hpp */,
+				0309712A1CBD62DE003385B3 /* stack_pop.hpp */,
+				0309712B1CBD62DE003385B3 /* stack_probe.hpp */,
+				0309712C1CBD62DE003385B3 /* stack_proxy.hpp */,
+				0309712D1CBD62DE003385B3 /* stack_push.hpp */,
+				0309712E1CBD62DE003385B3 /* stack_reference.hpp */,
+				0309712F1CBD62DE003385B3 /* state.hpp */,
+				030971301CBD62DE003385B3 /* state_view.hpp */,
+				030971311CBD62DE003385B3 /* table.hpp */,
+				030971321CBD62DE003385B3 /* table_core.hpp */,
+				030971331CBD62DE003385B3 /* table_iterator.hpp */,
+				030971341CBD62DE003385B3 /* thread.hpp */,
+				030971351CBD62DE003385B3 /* traits.hpp */,
+				030971361CBD62DE003385B3 /* tuple.hpp */,
+				030971371CBD62DE003385B3 /* types.hpp */,
+				030971381CBD62DE003385B3 /* userdata.hpp */,
+				030971391CBD62DE003385B3 /* usertype.hpp */,
+				0309713A1CBD62DE003385B3 /* usertype_traits.hpp */,
+			);
+			name = sol;
+			path = SolTest2/sol;
+			sourceTree = "<group>";
+		};
+		030971021CBD62DE003385B3 /* compatibility */ = {
+			isa = PBXGroup;
+			children = (
+				030971031CBD62DE003385B3 /* 5.0.0.h */,
+				030971041CBD62DE003385B3 /* 5.1.0.h */,
+				030971051CBD62DE003385B3 /* 5.x.x.h */,
+				030971061CBD62DE003385B3 /* 5.x.x.inl */,
+				030971071CBD62DE003385B3 /* version.hpp */,
+			);
+			path = compatibility;
+			sourceTree = "<group>";
+		};
+		030971431CBD641D003385B3 /* lua-5.3.2 */ = {
+			isa = PBXGroup;
+			children = (
+				0309714F1CBD641D003385B3 /* install */,
+				030971641CBD641D003385B3 /* Makefile */,
+				030971651CBD641D003385B3 /* README */,
+			);
+			path = "lua-5.3.2";
+			sourceTree = "<group>";
+		};
+		0309714F1CBD641D003385B3 /* install */ = {
+			isa = PBXGroup;
+			children = (
+				030971531CBD641D003385B3 /* include */,
+				030971591CBD641D003385B3 /* lib */,
+				0309715D1CBD641D003385B3 /* man */,
+				030971611CBD641D003385B3 /* share */,
+			);
+			path = install;
+			sourceTree = "<group>";
+		};
+		030971531CBD641D003385B3 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				030971541CBD641D003385B3 /* lauxlib.h */,
+				030971551CBD641D003385B3 /* lua.h */,
+				030971561CBD641D003385B3 /* lua.hpp */,
+				030971571CBD641D003385B3 /* luaconf.h */,
+				030971581CBD641D003385B3 /* lualib.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		030971591CBD641D003385B3 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				0309715A1CBD641D003385B3 /* liblua.a */,
+				0309715B1CBD641D003385B3 /* lua */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		0309715B1CBD641D003385B3 /* lua */ = {
+			isa = PBXGroup;
+			children = (
+				0309715C1CBD641D003385B3 /* 5.3 */,
+			);
+			path = lua;
+			sourceTree = "<group>";
+		};
+		0309715C1CBD641D003385B3 /* 5.3 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = 5.3;
+			sourceTree = "<group>";
+		};
+		0309715D1CBD641D003385B3 /* man */ = {
+			isa = PBXGroup;
+			children = (
+				0309715E1CBD641D003385B3 /* man1 */,
+			);
+			path = man;
+			sourceTree = "<group>";
+		};
+		0309715E1CBD641D003385B3 /* man1 */ = {
+			isa = PBXGroup;
+			children = (
+				0309715F1CBD641D003385B3 /* lua.1 */,
+				030971601CBD641D003385B3 /* luac.1 */,
+			);
+			path = man1;
+			sourceTree = "<group>";
+		};
+		030971611CBD641D003385B3 /* share */ = {
+			isa = PBXGroup;
+			children = (
+				030971621CBD641D003385B3 /* lua */,
+			);
+			path = share;
+			sourceTree = "<group>";
+		};
+		030971621CBD641D003385B3 /* lua */ = {
+			isa = PBXGroup;
+			children = (
+				030971631CBD641D003385B3 /* 5.3 */,
+			);
+			path = lua;
+			sourceTree = "<group>";
+		};
+		030971631CBD641D003385B3 /* 5.3 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = 5.3;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,9 +417,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				030970F21CBD619D003385B3 /* icon.png in Resources */,
+				030971D81CBD641D003385B3 /* lua.1 in Resources */,
 				030970F01CBD619D003385B3 /* sansation.ttf in Resources */,
+				0309713E1CBD62DE003385B3 /* LICENSE_1_0.txt in Resources */,
+				0309724F1CC2E4C9003385B3 /* girlWalk.png in Resources */,
+				030971421CBD62DE003385B3 /* 5.x.x.inl in Resources */,
 				030970EE1CBD619D003385B3 /* nice_music.ogg in Resources */,
 				030970EC1CBD619D003385B3 /* cute_image.jpg in Resources */,
+				030971D91CBD641D003385B3 /* luac.1 in Resources */,
+				030971DB1CBD641D003385B3 /* README in Resources */,
+				0309713D1CBD62DE003385B3 /* copyright.txt in Resources */,
+				0309713C1CBD62DE003385B3 /* CMakeLists.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,7 +454,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0309713F1CBD62DE003385B3 /* README.md in Sources */,
 				030970E91CBD619D003385B3 /* main.cpp in Sources */,
+				030971DA1CBD641D003385B3 /* Makefile in Sources */,
 				030970E61CBD619D003385B3 /* ResourcePath.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -183,10 +467,7 @@
 		030970F31CBD619D003385B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					i386,
-					x86_64,
-				);
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -198,10 +479,12 @@
 					/usr/local/include/,
 					"$(inherited)",
 				);
+				"HEADER_SEARCH_PATHS[arch=*]" = "./lua-5.3.2/**";
 				LIBRARY_SEARCH_PATHS = (
 					/usr/local/lib/,
 					"$(inherited)",
 				);
+				"LIBRARY_SEARCH_PATHS[arch=*]" = "./lua-5.3.2/**";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -230,10 +513,7 @@
 		030970F41CBD619D003385B3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					i386,
-					x86_64,
-				);
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -245,10 +525,12 @@
 					/usr/local/include/,
 					"$(inherited)",
 				);
+				"HEADER_SEARCH_PATHS[arch=*]" = "./lua-5.3.2/**";
 				LIBRARY_SEARCH_PATHS = (
 					/usr/local/lib/,
 					"$(inherited)",
 				);
+				"LIBRARY_SEARCH_PATHS[arch=*]" = "./lua-5.3.2/lib/";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -277,8 +559,18 @@
 		030970F61CBD619D003385B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include/,
+					"$(PROJECT_DIR)/lua-5.3.2/install/lib",
+				);
 				INFOPLIST_FILE = "SolTest2/SolTest2-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/lua-5.3.2/install/lib",
+					/usr/local/lib/,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -286,8 +578,19 @@
 		030970F71CBD619D003385B3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/lua-5.3.2/install/lib",
+					/usr/local/include/,
+				);
 				INFOPLIST_FILE = "SolTest2/SolTest2-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/lua-5.3.2/install/lib",
+					"$(PROJECT_DIR)/lua-5.3.2/src",
+				);
+				"LIBRARY_SEARCH_PATHS[arch=*]" = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -311,6 +614,7 @@
 				030970F71CBD619D003385B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
