@@ -14,14 +14,13 @@
 // method resourcePath() from ResourcePath.hpp
 //
 
-#include <SFML/Audio.hpp>
+//#include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include "sol.hpp"
-//#include "lua.hpp"
-
 // Here is a small helper for you ! Have a look.
 #include "ResourcePath.hpp"
+#include "girl.hpp"
 
 
 
@@ -29,6 +28,29 @@ int main(int, char const**)
 {
     // Create the main window
     sf::RenderWindow window(sf::VideoMode(1600, 1200), "SFML window");
+    
+    //setting up the bg
+    sf::Vector2f bgVector(1600.f,1200.f);
+    sf::RectangleShape bg(bgVector);
+    bg.setFillColor(sf::Color::Blue);
+
+    
+    //setting up the girl sprite
+    // Load a sprite to display
+//    sf::Texture texture;
+//    if (!texture.loadFromFile(resourcePath() + "girlWalk.png")) {
+//        return EXIT_FAILURE;
+//    }
+//    
+//    //sf::Sprite sprite(texture);
+//    sf::IntRect rectSourceSprite(0,0,59,64);
+//    
+//    sf::Sprite sprite(texture, rectSourceSprite);
+//    //sprite.setTextureRect(sf::IntRect(0,0,59,64));
+//    sprite.setPosition(800,600);
+    girl player(girl(800, 600));
+
+    
 
     // Set the Icon
     sf::Image icon;
@@ -37,26 +59,6 @@ int main(int, char const**)
     }
     window.setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
 
-    // Load a sprite to display
-    sf::Texture texture;
-    if (!texture.loadFromFile(resourcePath() + "girlWalk.png")) {
-        return EXIT_FAILURE;
-    }
-    
-    
-    
-    
-    
-    //sf::Sprite sprite(texture);
-    sf::IntRect rectSourceSprite(0,0,59,64);
-    
-    sf::Sprite sprite(texture, rectSourceSprite);
-    //sprite.setTextureRect(sf::IntRect(0,0,59,64));
-    sprite.setPosition(800,600);
-    
-    sf::Vector2f bgVector(1600.f,1200.f);
-    sf::RectangleShape bg(bgVector);
-    bg.setFillColor(sf::Color::Blue);
 
     // Create a graphical text to display
     sf::Font font;
@@ -73,39 +75,29 @@ int main(int, char const**)
     while (window.isOpen())
     {
         
-        //girl is constantly animating
-        //sf::Time t1 = sf::seconds(.5f);
-        
-//        int time1 = (int)clock.getElapsedTime().asSeconds();
-//        
-//        if (time1%2 == 0){
-//            std::out
-//            sprite.setTextureRect(sf::IntRect(59,0,59,64));
-//        }
-//        else{
-//            sprite.setTextureRect(sf::IntRect(0,0,59,64));
-//        }
+
         
         // Process events
         
-        //update animation very 1 second
-        if (clock.getElapsedTime().asSeconds() > 0.3f){
-            if (rectSourceSprite.left == 59){
-                //std::cout << "hi ";
-                rectSourceSprite.left = 0;
-            }else{
-                rectSourceSprite.left = 59;
-                //std::cout << "bye ";
-            }
-            
-            sprite.setTextureRect(rectSourceSprite);
-            
-            clock.restart();
-            
-        }
+        //update animation for girl
+//        if (clock.getElapsedTime().asSeconds() > 0.3f){
+//            if (rectSourceSprite.left == 59){
+//                //std::cout << "hi ";
+//                rectSourceSprite.left = 0;
+//            }else{
+//                rectSourceSprite.left = 59;
+//                //std::cout << "bye ";
+//            }
+//            
+//            sprite.setTextureRect(rectSourceSprite);
+//            
+//            clock.restart();
+//        }
+        
+        player.animate(clock);
 
         
-        sf::Event event;
+        sf::Event event; //called when an event (mouse over, tap, whatver) happens
         while (window.pollEvent(event))
         {
             
@@ -128,10 +120,7 @@ int main(int, char const**)
         window.draw(bg);
         
         // Draw the sprite
-        window.draw(sprite);
-
-        // Draw the string
-        //window.draw(text);
+        window.draw(player.sprite);
         
 
         // Update the window

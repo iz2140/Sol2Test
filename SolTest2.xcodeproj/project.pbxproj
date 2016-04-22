@@ -24,6 +24,7 @@
 		030971DA1CBD641D003385B3 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 030971641CBD641D003385B3 /* Makefile */; };
 		030971DB1CBD641D003385B3 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 030971651CBD641D003385B3 /* README */; };
 		0309724F1CC2E4C9003385B3 /* girlWalk.png in Resources */ = {isa = PBXBuildFile; fileRef = 0309724E1CC2E4C9003385B3 /* girlWalk.png */; };
+		030972521CCA872A003385B3 /* girl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 030972501CCA872A003385B3 /* girl.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,6 +111,8 @@
 		030971641CBD641D003385B3 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		030971651CBD641D003385B3 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		0309724E1CC2E4C9003385B3 /* girlWalk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = girlWalk.png; sourceTree = "<group>"; };
+		030972501CCA872A003385B3 /* girl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = girl.cpp; sourceTree = "<group>"; };
+		030972511CCA872A003385B3 /* girl.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = girl.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +153,8 @@
 				030970E51CBD619D003385B3 /* ResourcePath.mm */,
 				030970E71CBD619D003385B3 /* ResourcePath.hpp */,
 				030970E81CBD619D003385B3 /* main.cpp */,
+				030972501CCA872A003385B3 /* girl.cpp */,
+				030972511CCA872A003385B3 /* girl.hpp */,
 				030970EA1CBD619D003385B3 /* Resources */,
 				030970E31CBD619D003385B3 /* Supporting Files */,
 			);
@@ -457,6 +462,7 @@
 				0309713F1CBD62DE003385B3 /* README.md in Sources */,
 				030970E91CBD619D003385B3 /* main.cpp in Sources */,
 				030971DA1CBD641D003385B3 /* Makefile in Sources */,
+				030972521CCA872A003385B3 /* girl.cpp in Sources */,
 				030970E61CBD619D003385B3 /* ResourcePath.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
