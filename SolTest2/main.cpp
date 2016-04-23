@@ -24,7 +24,7 @@
 #include "tampon.hpp"
 
 int nextTampon = 0;
-
+bool drawTampon = false;
 
 int main(int, char const**)
 {
@@ -99,9 +99,8 @@ int main(int, char const**)
             if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Space) {
                 
                 std::cout << "hi\n";
-                tampon myTampon = tampons[nextTampon];
                 nextTampon++;
-                window.draw(myTampon.sprite);
+                drawTampon = true;
                 //myTampon.animate(clock);
                 //window.draw();
                 // Update the window
@@ -115,6 +114,13 @@ int main(int, char const**)
         window.clear();
 
         window.draw(bg);
+        
+        if (drawTampon){
+            tampon myTampon = tampons[nextTampon];
+            window.draw(myTampon.sprite);
+            myTampon.animate(clock);
+            //drawTampon = false;
+        }
         
         // Draw the sprite
         window.draw(player.sprite);
