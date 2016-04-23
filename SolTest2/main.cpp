@@ -21,7 +21,9 @@
 // Here is a small helper for you ! Have a look.
 #include "ResourcePath.hpp"
 #include "girl.hpp"
+#include "tampon.hpp"
 
+int nextTampon = 0;
 
 
 int main(int, char const**)
@@ -35,20 +37,18 @@ int main(int, char const**)
     bg.setFillColor(sf::Color::Blue);
 
     
-    //setting up the girl sprite
-    // Load a sprite to display
-//    sf::Texture texture;
-//    if (!texture.loadFromFile(resourcePath() + "girlWalk.png")) {
-//        return EXIT_FAILURE;
-//    }
-//    
-//    //sf::Sprite sprite(texture);
-//    sf::IntRect rectSourceSprite(0,0,59,64);
-//    
-//    sf::Sprite sprite(texture, rectSourceSprite);
-//    //sprite.setTextureRect(sf::IntRect(0,0,59,64));
-//    sprite.setPosition(800,600);
-    girl player(girl(800, 600));
+    girl player = girl(800, 600);
+    
+    sf::Texture texture;
+    if (!texture.loadFromFile(resourcePath() + "ammo.png")) {
+        return EXIT_FAILURE;
+    }
+    
+    std::vector<tampon> tampons;
+    
+    for (int i = 0; i < 10 ; i++){
+        tampons.push_back(tampon(texture));
+    }
 
     
 
@@ -78,26 +78,10 @@ int main(int, char const**)
 
         
         // Process events
-        
-        //update animation for girl
-//        if (clock.getElapsedTime().asSeconds() > 0.3f){
-//            if (rectSourceSprite.left == 59){
-//                //std::cout << "hi ";
-//                rectSourceSprite.left = 0;
-//            }else{
-//                rectSourceSprite.left = 59;
-//                //std::cout << "bye ";
-//            }
-//            
-//            sprite.setTextureRect(rectSourceSprite);
-//            
-//            clock.restart();
-//        }
-        
         player.animate(clock);
 
         
-        sf::Event event; //called when an event (mouse over, tap, whatver) happens
+        sf::Event event; //called when an event (mouse over, click, whatver) happens
         while (window.pollEvent(event))
         {
             
@@ -112,6 +96,19 @@ int main(int, char const**)
                 window.close();
             }
             
+            if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Space) {
+                
+                std::cout << "hi\n";
+                tampon myTampon = tampons[nextTampon];
+                nextTampon++;
+                window.draw(myTampon.sprite);
+                //myTampon.animate(clock);
+                //window.draw();
+                // Update the window
+                //window.display();
+            }
+            
+            
         }
 
         // Clear screen
@@ -123,6 +120,12 @@ int main(int, char const**)
         window.draw(player.sprite);
         
 
+        //window.draw(tampons[0].sprite);
+        //myTampon.animate(clock);
+        //window.draw();
+        // Update the window
+        //window.display();
+        
         // Update the window
         window.display();
     }

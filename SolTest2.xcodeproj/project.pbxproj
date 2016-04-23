@@ -25,6 +25,8 @@
 		030971DB1CBD641D003385B3 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 030971651CBD641D003385B3 /* README */; };
 		0309724F1CC2E4C9003385B3 /* girlWalk.png in Resources */ = {isa = PBXBuildFile; fileRef = 0309724E1CC2E4C9003385B3 /* girlWalk.png */; };
 		030972521CCA872A003385B3 /* girl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 030972501CCA872A003385B3 /* girl.cpp */; };
+		030972551CCA9ECB003385B3 /* tampon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 030972531CCA9ECB003385B3 /* tampon.cpp */; };
+		030972571CCAC2CE003385B3 /* ammo.png in Resources */ = {isa = PBXBuildFile; fileRef = 030972561CCAC2CE003385B3 /* ammo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -113,6 +115,9 @@
 		0309724E1CC2E4C9003385B3 /* girlWalk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = girlWalk.png; sourceTree = "<group>"; };
 		030972501CCA872A003385B3 /* girl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = girl.cpp; sourceTree = "<group>"; };
 		030972511CCA872A003385B3 /* girl.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = girl.hpp; sourceTree = "<group>"; };
+		030972531CCA9ECB003385B3 /* tampon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tampon.cpp; sourceTree = "<group>"; };
+		030972541CCA9ECB003385B3 /* tampon.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = tampon.hpp; sourceTree = "<group>"; };
+		030972561CCAC2CE003385B3 /* ammo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ammo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +160,8 @@
 				030970E81CBD619D003385B3 /* main.cpp */,
 				030972501CCA872A003385B3 /* girl.cpp */,
 				030972511CCA872A003385B3 /* girl.hpp */,
+				030972531CCA9ECB003385B3 /* tampon.cpp */,
+				030972541CCA9ECB003385B3 /* tampon.hpp */,
 				030970EA1CBD619D003385B3 /* Resources */,
 				030970E31CBD619D003385B3 /* Supporting Files */,
 			);
@@ -172,6 +179,7 @@
 		030970EA1CBD619D003385B3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				030972561CCAC2CE003385B3 /* ammo.png */,
 				0309724E1CC2E4C9003385B3 /* girlWalk.png */,
 				030970EB1CBD619D003385B3 /* cute_image.jpg */,
 				030970ED1CBD619D003385B3 /* nice_music.ogg */,
@@ -426,6 +434,7 @@
 				030970F01CBD619D003385B3 /* sansation.ttf in Resources */,
 				0309713E1CBD62DE003385B3 /* LICENSE_1_0.txt in Resources */,
 				0309724F1CC2E4C9003385B3 /* girlWalk.png in Resources */,
+				030972571CCAC2CE003385B3 /* ammo.png in Resources */,
 				030971421CBD62DE003385B3 /* 5.x.x.inl in Resources */,
 				030970EE1CBD619D003385B3 /* nice_music.ogg in Resources */,
 				030970EC1CBD619D003385B3 /* cute_image.jpg in Resources */,
@@ -459,6 +468,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				030972551CCA9ECB003385B3 /* tampon.cpp in Sources */,
 				0309713F1CBD62DE003385B3 /* README.md in Sources */,
 				030970E91CBD619D003385B3 /* main.cpp in Sources */,
 				030971DA1CBD641D003385B3 /* Makefile in Sources */,
