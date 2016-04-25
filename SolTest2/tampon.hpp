@@ -14,24 +14,27 @@
 #include "ResourcePath.hpp"
 #include "girl.hpp"
 #include "enemy.hpp"
+#include <memory>
+
 
 class tampon {
-    sf::Texture texture;
+    static std::unique_ptr<sf::Texture> texture;
     sf::IntRect rectSourceSprite;
     
-    
 public:
+    
     sf::Sprite sprite;
     bool exists;
     //constructor
     tampon(sf::Texture &texture);
+    //tampon();
     //~girl();
     
     void animate(sf::Clock &clock);
     void shoot();
     void move(float a, float b);
     void destroy();
-    void collide(enemy& enemy);
+    bool checkCollision(enemy& enemy);
     sf::FloatRect getRect();
 };
 

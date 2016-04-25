@@ -26,6 +26,26 @@ tampon::tampon(sf::Texture &texture){
     
 }
 
+//tampon::tampon(){
+//    if (texture == nullptr){
+//        texture = std::make_unique<sf::Texture>();
+//        if (!texture->loadFromFile(resourcePath() + "ammo.png")) {
+//            //return EXIT_FAILURE;
+//        }
+//    }
+//    
+//    sf::IntRect myRectSourceSprite(0,0,73,16);
+//    rectSourceSprite = myRectSourceSprite;
+//    
+//    sf::Sprite mySprite(*texture, rectSourceSprite);
+//    
+//    sprite = mySprite;
+//    
+//    
+//    exists = false;
+//}
+
+
 void tampon::animate(sf::Clock& clock){
     if (clock.getElapsedTime().asSeconds() > 0.3f){
         if (rectSourceSprite.left == 219){
@@ -50,10 +70,13 @@ void tampon::shoot(){
     //clock.restart();
 }
 
-void tampon::collide(enemy& enemy) {
+bool tampon::checkCollision(enemy& enemy) {
     if (sprite.getGlobalBounds().intersects(enemy.sprite.getGlobalBounds())){
         this->destroy();
+        enemy.destroy();
+        return true;
     }
+    return false;
 }
 
 sf::FloatRect tampon::getRect(){

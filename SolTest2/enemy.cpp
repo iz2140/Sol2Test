@@ -9,6 +9,7 @@
 #include "enemy.hpp"
 #include <iostream>
 
+
 //implementation of constructor
 enemy::enemy(sf::Texture &texture){
     
@@ -54,9 +55,11 @@ sf::FloatRect enemy::getRect(){
 void enemy::appear(){
     sprite.setPosition(1600,600);
     exists = true;
-    //sprite.move(1.0, 0);
-    //clock.restart();
-    std::cout << "bye ";
+}
+
+void enemy::destroy(){
+    std::cout << "destroying enemy\n";
+    exists = false;
 }
 
 //bool enemy::collidesWith(){
@@ -65,8 +68,7 @@ void enemy::appear(){
 void enemy::move(float a, float b){
     sprite.move(a, b);
     if (sprite.getPosition().x < 10){
-        std::cout << "destroying enemy\n";
-        exists = false;
+        this->destroy();
     }
 }
 

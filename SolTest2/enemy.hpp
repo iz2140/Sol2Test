@@ -29,6 +29,7 @@ public:
     void animate(sf::Clock &clock);
     void appear();
     void move(float a, float b);
+    void destroy();
     sf::FloatRect getRect();
     
 };
