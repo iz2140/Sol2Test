@@ -14,6 +14,7 @@
 #include "ResourcePath.hpp"
 #include "girl.hpp"
 
+
 class enemy {
     sf::Texture texture;
     sf::IntRect rectSourceSprite;
@@ -22,6 +23,7 @@ class enemy {
 public:
     sf::Sprite sprite;
     bool exists;
+    int speed;
     //constructor
     enemy(sf::Texture &texture);
     //~girl();

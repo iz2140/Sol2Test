@@ -31,6 +31,11 @@ int nextTampon = 0;
 int nextEnemy = 0;
 int score = 10;
 
+sf::RectangleShape drawFloor();
+sf::RectangleShape drawSky();
+
+
+
 void spawnEnemy(sf::Clock& clock, std::vector<enemy>& enemies){
     auto seed = std::chrono::system_clock::now().time_since_epoch().count();
     std::default_random_engine generator(seed);
@@ -48,8 +53,6 @@ void spawnEnemy(sf::Clock& clock, std::vector<enemy>& enemies){
                 nextEnemy++;
             }
         }
-
-        
         clock.restart();
     }
 }
@@ -58,15 +61,14 @@ void spawnEnemy(sf::Clock& clock, std::vector<enemy>& enemies){
 int main(int, char const**)
 {
     
+
+    
     // Create the main window
     sf::RenderWindow window(sf::VideoMode(1600, 1200), "Window");
     window.setFramerateLimit(60);
     
-    //setting up the bg
-    sf::Vector2f bgVector(1600.f,1200.f);
-    sf::RectangleShape bg(bgVector);
-    bg.setFillColor(sf::Color::Blue);
-
+    sf::RectangleShape floor = drawFloor();
+    sf::RectangleShape sky = drawSky();
     
     girl player = girl(800, 600);
     
@@ -124,11 +126,7 @@ int main(int, char const**)
         player.animate(clock);
         
         spawnEnemy(clock3, enemies);
-        
-        //detect collisions tampons and enemies
-        //for
-        
-        
+
         sf::Event event; //called when an event (mouse over, click, whatver) happens
         while (window.pollEvent(event))
         {
@@ -167,7 +165,8 @@ int main(int, char const**)
         // Clear screen
         window.clear();
 
-        window.draw(bg);
+        window.draw(floor);
+        window.draw(sky);
         
         
         //draw all tampons
@@ -187,11 +186,13 @@ int main(int, char const**)
             
         }
         
+        
         for (int i = 0; i < 10; i++)
         {
             if (enemies[i].exists){
                 window.draw(enemies[i].sprite);
-                enemies[i].move(-10,0);
+                //std::cout << enemies[i].speed << std::endl;
+                enemies[i].move(-enemies[i].speed,0);
                 enemies[i].animate(clock2);
             }
             
@@ -210,4 +211,22 @@ int main(int, char const**)
     
     lua.script( "print('bark bark bark!')" );
     return EXIT_SUCCESS;
+}
+
+sf::RectangleShape drawFloor(){
+    //setting up the bg
+    sf::Vector2f bgVector(1600.f,400.f);
+    sf::RectangleShape bg(bgVector);
+    bg.setFillColor(sf::Color::Black);
+    bg.setPosition(0, 200);
+    return bg;
+}
+
+sf::RectangleShape drawSky(){
+    //setting up the bg
+    sf::Vector2f bgVector(1600.f,800.f);
+    sf::RectangleShape bg(bgVector);
+    bg.setFillColor(sf::Color::Color(100,100,100,255));
+    bg.setPosition(0, 0);
+    return bg;
 }

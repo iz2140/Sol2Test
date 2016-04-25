@@ -8,11 +8,17 @@
 
 #include "enemy.hpp"
 #include <iostream>
-
+#include <ctime>        // std::time
+#include <cstdlib>      // std::rand, std::srand
+#include <random>
+#include <chrono>
 
 //implementation of constructor
 enemy::enemy(sf::Texture &texture){
-    
+    auto seed = std::chrono::system_clock::now().time_since_epoch().count();
+    std::default_random_engine generator(seed);
+    auto die = bind(std::uniform_int_distribution<>{5,50}, generator);
+    speed = die();
     
     sf::IntRect myRectSourceSprite(0,0,55,60);
     rectSourceSprite = myRectSourceSprite;
@@ -20,12 +26,7 @@ enemy::enemy(sf::Texture &texture){
     sf::Sprite mySprite(texture, rectSourceSprite);
     
     sprite = mySprite;
-    
-    
     exists = false;
-    
-    std::cout << "hi ";
-    
     
 }
 
@@ -62,8 +63,6 @@ void enemy::destroy(){
     exists = false;
 }
 
-//bool enemy::collidesWith(){
-//}
 
 void enemy::move(float a, float b){
     sprite.move(a, b);
