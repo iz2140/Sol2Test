@@ -26,7 +26,7 @@ tampon = {
 }
 
 enemy = {
-	img = "ammo.png",
+	img = "enemy.png",
 	width = 55,
 	height = 60,
 	animFrames = 2,

@@ -33,6 +33,7 @@ int score = 10;
 float WINDOW_WIDTH;
 float WINDOW_HEIGHT;
 int MAX_FRAME_RATE;
+int GIRL_STARTING_X, GIRL_STARTING_Y;
 
 //resource names
 std::string AMMO_IMG;
@@ -63,35 +64,36 @@ void spawnEnemy(sf::Clock& clock, std::vector<enemy>& enemies){
 
 int main(int, char const**)
 {
+    loadLuaConfig();
     
     // Create the main window
-    sf::RenderWindow window(sf::VideoMode(1600, 1200), "Window");
-    window.setFramerateLimit(60);
+    sf::RenderWindow window(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "Window");
+    window.setFramerateLimit(MAX_FRAME_RATE);
     
     //setting up the bg
-    sf::Vector2f bgVector(1600.f,1200.f);
+    sf::Vector2f bgVector(WINDOW_WIDTH,WINDOW_HEIGHT);
     sf::RectangleShape bg(bgVector);
     bg.setFillColor(sf::Color::Blue);
 
     
-    girl player = girl(800, 600);
+    girl player = girl(GIRL_STARTING_X, GIRL_STARTING_Y);
     
     sf::Texture texture;
-    if (!texture.loadFromFile(resourcePath() + "ammo.png")) {
+    if (!texture.loadFromFile(resourcePath() + AMMO_IMG)) {
         return EXIT_FAILURE;
     }
     
     std::vector<tampon> tampons;
-    for (int i = 0; i < 10 ; i++){
+    for (int i = 0; i < numTampons ; i++){
         tampons.push_back(tampon(texture));
     }
     
     sf::Texture enemy_texture;
-    if (!enemy_texture.loadFromFile(resourcePath() + "enemy.png")) {
+    if (!enemy_texture.loadFromFile(resourcePath() + ENEMY_IMG)) {
         return EXIT_FAILURE;
     }
     std::vector<enemy> enemies;
-    for (int i = 0; i < 10 ; i++){
+    for (int i = 0; i < numEnemies ; i++){
         enemies.push_back(enemy(enemy_texture));
     }
     
@@ -227,6 +229,10 @@ void loadLuaConfig(){
     WINDOW_WIDTH = lua["window"]["width"];
     WINDOW_HEIGHT = lua["window"]["height"];
     MAX_FRAME_RATE = lua["window"]["frameRateLimit"];
+    GIRL_STARTING_X = lua["girl"]["startingPosition"]["x"];
+    GIRL_STARTING_Y = lua["girl"]["startingPosition"]["y"];
+    AMMO_IMG = lua["tampon"]["img"];
+    ENEMY_IMG = lua["enemy"]["img"];
     
     std::cout << numTampons << std::endl;
 
