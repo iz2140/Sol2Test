@@ -18,12 +18,35 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include "sol.hpp"
-// Here is a small helper for you ! Have a look.
 #include "ResourcePath.hpp"
 #include "girl.hpp"
 #include "tampon.hpp"
+#include "enemy.hpp"
 
 int nextTampon = 0;
+int nextEnemy = 0;
+int score = 10;
+
+void spawnEnemy(sf::Clock& clock, std::vector<enemy>& enemies){
+    if (clock.getElapsedTime().asSeconds() > 2.0f){
+           
+        if (!enemies[nextEnemy].exists){
+            std::cout << "spawning an enemy " << nextEnemy << "\n";
+            
+            enemies[nextEnemy].appear();
+            if (nextEnemy == enemies.size()-1){
+                std::cout << "setting nextEnemy to 0\n";
+                nextEnemy = 0;
+            } else {
+                nextEnemy++;
+            }
+        }
+
+        
+        clock.restart();
+    }
+}
+
 
 int main(int, char const**)
 {
@@ -45,10 +68,20 @@ int main(int, char const**)
     }
     
     std::vector<tampon> tampons;
-    
     for (int i = 0; i < 10 ; i++){
         tampons.push_back(tampon(texture));
     }
+    
+    sf::Texture enemy_texture;
+    if (!enemy_texture.loadFromFile(resourcePath() + "enemy.png")) {
+        return EXIT_FAILURE;
+    }
+    std::vector<enemy> enemies;
+    for (int i = 0; i < 10 ; i++){
+        enemies.push_back(enemy(enemy_texture));
+    }
+    
+    
 
     
 
@@ -73,12 +106,16 @@ int main(int, char const**)
     
     sf::Clock clock2;
     
+    sf::Clock clock3;
+    
     // Start the game loop
     while (window.isOpen())
     {
         
         // Process events
         player.animate(clock);
+        
+        spawnEnemy(clock3, enemies);
         
         sf::Event event; //called when an event (mouse over, click, whatver) happens
         while (window.pollEvent(event))
@@ -128,6 +165,16 @@ int main(int, char const**)
                 window.draw(tampons[i].sprite);
                 tampons[i].move(10,0);
                 tampons[i].animate(clock2);
+            }
+            
+        }
+        
+        for (int i = 0; i < 10; i++)
+        {
+            if (enemies[i].exists){
+                window.draw(enemies[i].sprite);
+                enemies[i].move(-10,0);
+                enemies[i].animate(clock2);
             }
             
         }
