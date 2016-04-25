@@ -22,13 +22,14 @@ class tampon {
     
 public:
     sf::Sprite sprite;
-    
+    bool exists;
     //constructor
     tampon(sf::Texture &texture);
     //~girl();
     
     void animate(sf::Clock &clock);
-    void shoot(sf::Window &window);
+    void shoot();
+    void move(float a, float b);
     
 };
 

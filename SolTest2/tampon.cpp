@@ -13,21 +13,16 @@
 tampon::tampon(sf::Texture &texture){
     
     
-//    if (!texture.loadFromFile(resourcePath() + "ammo.png")) {
-//        return EXIT_FAILURE;
-//    }
-    
     sf::IntRect myRectSourceSprite(0,0,73,16);
     rectSourceSprite = myRectSourceSprite;
     
     sf::Sprite mySprite(texture, rectSourceSprite);
     
     sprite = mySprite;
-    //sprite.setTextureRect(sf::IntRect(0,0,59,64));
-    sprite.setPosition(600,600);
     
     
-    //std::cout << "am i getting called\n";
+    exists = false;
+    
     
 }
 
@@ -45,5 +40,21 @@ void tampon::animate(sf::Clock& clock){
         
         clock.restart();
     }
-    
 }
+
+
+void tampon::shoot(){
+    sprite.setPosition(600,600);
+    exists = true;
+    //sprite.move(1.0, 0);
+    //clock.restart();
+}
+
+void tampon::move(float a, float b){
+    sprite.move(a, b);
+    if (sprite.getPosition().x > 1600){
+        std::cout << "destroying tampon\n";
+        exists = false;
+    }
+}
+

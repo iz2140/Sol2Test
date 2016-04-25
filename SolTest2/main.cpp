@@ -24,12 +24,12 @@
 #include "tampon.hpp"
 
 int nextTampon = 0;
-bool drawTampon = false;
 
 int main(int, char const**)
 {
     // Create the main window
-    sf::RenderWindow window(sf::VideoMode(1600, 1200), "SFML window");
+    sf::RenderWindow window(sf::VideoMode(1600, 1200), "Window");
+    window.setFramerateLimit(60);
     
     //setting up the bg
     sf::Vector2f bgVector(1600.f,1200.f);
@@ -71,15 +71,14 @@ int main(int, char const**)
 
     sf::Clock clock;
     
+    sf::Clock clock2;
+    
     // Start the game loop
     while (window.isOpen())
     {
         
-
-        
         // Process events
         player.animate(clock);
-
         
         sf::Event event; //called when an event (mouse over, click, whatver) happens
         while (window.pollEvent(event))
@@ -96,15 +95,21 @@ int main(int, char const**)
                 window.close();
             }
             
+            //spacebar pressed
             if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Space) {
                 
                 std::cout << "hi\n";
-                nextTampon++;
-                drawTampon = true;
-                //myTampon.animate(clock);
-                //window.draw();
-                // Update the window
-                //window.display();
+                if (!tampons[nextTampon].exists){
+                    std::cout << "shooting a tampon " << nextTampon << "\n";
+
+                    tampons[nextTampon].shoot();
+                    if (nextTampon == tampons.size()-1){
+                        std::cout << "setting nextTampon to 0\n";
+                        nextTampon = 0;
+                    } else {
+                        nextTampon++;
+                    }
+                }
             }
             
             
@@ -115,22 +120,21 @@ int main(int, char const**)
 
         window.draw(bg);
         
-        if (drawTampon){
-            tampon myTampon = tampons[nextTampon];
-            window.draw(myTampon.sprite);
-            myTampon.animate(clock);
-            //drawTampon = false;
+        
+        //draw all tampons
+        for (int i = 0; i < 10; i++)
+        {
+            if (tampons[i].exists){
+                window.draw(tampons[i].sprite);
+                tampons[i].move(10,0);
+                tampons[i].animate(clock2);
+            }
+            
         }
         
         // Draw the sprite
         window.draw(player.sprite);
         
-
-        //window.draw(tampons[0].sprite);
-        //myTampon.animate(clock);
-        //window.draw();
-        // Update the window
-        //window.display();
         
         // Update the window
         window.display();
