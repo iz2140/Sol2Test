@@ -44,6 +44,12 @@ void enemy::animate(sf::Clock& clock){
     }
 }
 
+sf::FloatRect enemy::getRect(){
+    sf::FloatRect temp = sprite.getLocalBounds();
+    temp.left = sprite.getPosition().x;
+    temp.top = sprite.getPosition().y;
+    return temp;
+}
 
 void enemy::appear(){
     sprite.setPosition(1600,600);

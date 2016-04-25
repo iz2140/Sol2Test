@@ -50,11 +50,29 @@ void tampon::shoot(){
     //clock.restart();
 }
 
+void tampon::collide(enemy& enemy) {
+    if (sprite.getGlobalBounds().intersects(enemy.sprite.getGlobalBounds())){
+        this->destroy();
+    }
+}
+
+sf::FloatRect tampon::getRect(){
+    sf::FloatRect temp = sprite.getLocalBounds();
+    temp.left = sprite.getPosition().x;
+    temp.top = sprite.getPosition().y;
+    return temp;
+}
+
+void tampon::destroy(){
+    std::cout << "destroying tampon\n";
+    exists = false;
+}
+
 void tampon::move(float a, float b){
     sprite.move(a, b);
     if (sprite.getPosition().x > 1600){
-        std::cout << "destroying tampon\n";
-        exists = false;
+        
+        this->destroy();
     }
 }
 

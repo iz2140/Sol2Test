@@ -13,7 +13,7 @@
 #include <SFML/Graphics.hpp>
 #include "ResourcePath.hpp"
 #include "girl.hpp"
-
+#include "enemy.hpp"
 
 class tampon {
     sf::Texture texture;
@@ -30,7 +30,9 @@ public:
     void animate(sf::Clock &clock);
     void shoot();
     void move(float a, float b);
-    
+    void destroy();
+    void collide(enemy& enemy);
+    sf::FloatRect getRect();
 };
 
 #endif /* tampon_hpp */

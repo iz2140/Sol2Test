@@ -117,6 +117,10 @@ int main(int, char const**)
         
         spawnEnemy(clock3, enemies);
         
+        //detect collisions tampons and enemies
+        //for
+        
+        
         sf::Event event; //called when an event (mouse over, click, whatver) happens
         while (window.pollEvent(event))
         {
@@ -163,6 +167,12 @@ int main(int, char const**)
         {
             if (tampons[i].exists){
                 window.draw(tampons[i].sprite);
+                for (int j = 0; j < 10; j++)
+                {
+                    if (enemies[j].exists){
+                        tampons[i].collide(enemies[j]);
+                    }
+                }
                 tampons[i].move(10,0);
                 tampons[i].animate(clock2);
             }
