@@ -30,6 +30,7 @@
 		03FD52C21CCDC9BD0020E7A8 /* enemy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03FD52C01CCDC9BD0020E7A8 /* enemy.cpp */; };
 		03FD52C41CCDCE1E0020E7A8 /* enemy.png in Resources */ = {isa = PBXBuildFile; fileRef = 03FD52C31CCDCE1E0020E7A8 /* enemy.png */; };
 		03FD52C91CCEC1510020E7A8 /* cloud.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03FD52C71CCEC1510020E7A8 /* cloud.cpp */; };
+		03FD52CB1CCEC6C50020E7A8 /* cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = 03FD52CA1CCEC6C50020E7A8 /* cloud.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -126,6 +127,7 @@
 		03FD52C31CCDCE1E0020E7A8 /* enemy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enemy.png; sourceTree = "<group>"; };
 		03FD52C71CCEC1510020E7A8 /* cloud.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cloud.cpp; sourceTree = "<group>"; };
 		03FD52C81CCEC1510020E7A8 /* cloud.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = cloud.hpp; sourceTree = "<group>"; };
+		03FD52CA1CCEC6C50020E7A8 /* cloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloud.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +193,7 @@
 		030970EA1CBD619D003385B3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				03FD52CA1CCEC6C50020E7A8 /* cloud.png */,
 				03FD52C31CCDCE1E0020E7A8 /* enemy.png */,
 				030972561CCAC2CE003385B3 /* ammo.png */,
 				0309724E1CC2E4C9003385B3 /* girlWalk.png */,
@@ -442,6 +445,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03FD52CB1CCEC6C50020E7A8 /* cloud.png in Resources */,
 				030970F21CBD619D003385B3 /* icon.png in Resources */,
 				030971D81CBD641D003385B3 /* lua.1 in Resources */,
 				03FD52C41CCDCE1E0020E7A8 /* enemy.png in Resources */,

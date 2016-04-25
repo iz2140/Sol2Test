@@ -11,7 +11,7 @@
 //implementation of constructor
 cloud::cloud(sf::Texture &texture){
     
-    sf::IntRect myRectSourceSprite(0,0,55,60);
+    sf::IntRect myRectSourceSprite(0,0,200,100);
     rectSourceSprite = myRectSourceSprite;
     
     sf::Sprite mySprite(texture, rectSourceSprite);
@@ -21,21 +21,21 @@ cloud::cloud(sf::Texture &texture){
     
 }
 
-void cloud::animate(sf::Clock& clock){
-    if (clock.getElapsedTime().asSeconds() > 0.3f){
-        if (rectSourceSprite.left == 55){
-            //std::cout << "hi ";
-            rectSourceSprite.left = 0;
-        }else{
-            rectSourceSprite.left = 55;
-            //std::cout << "bye ";
-        }
-        
-        sprite.setTextureRect(rectSourceSprite);
-        
-        clock.restart();
-    }
-}
+//void cloud::animate(sf::Clock& clock){
+//    if (clock.getElapsedTime().asSeconds() > 0.3f){
+//        if (rectSourceSprite.left == 55){
+//            //std::cout << "hi ";
+//            rectSourceSprite.left = 0;
+//        }else{
+//            rectSourceSprite.left = 55;
+//            //std::cout << "bye ";
+//        }
+//        
+//        sprite.setTextureRect(rectSourceSprite);
+//        
+//        clock.restart();
+//    }
+//}
 
 sf::FloatRect cloud::getRect(){
     sf::FloatRect temp = sprite.getLocalBounds();

@@ -96,7 +96,7 @@ int main(int, char const**)
     }
     
     sf::Texture cloud_texture;
-    if (!cloud_texture.loadFromFile(resourcePath() + "enemy.png")) {
+    if (!cloud_texture.loadFromFile(resourcePath() + "cloud.png")) {
         return EXIT_FAILURE;
     }
     
@@ -218,7 +218,7 @@ int main(int, char const**)
                 window.draw(clouds[i].sprite);
                 //std::cout << enemies[i].speed << std::endl;
                 clouds[i].move(-2,0);
-                clouds[i].animate(clock2);
+                //clouds[i].animate(clock2);
             }
             
         }
