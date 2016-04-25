@@ -22,14 +22,21 @@
 #include "girl.hpp"
 #include "tampon.hpp"
 #include "enemy.hpp"
+#include <ctime>        // std::time
+#include <cstdlib>      // std::rand, std::srand
+#include <random>
+#include <chrono>
 
 int nextTampon = 0;
 int nextEnemy = 0;
 int score = 10;
 
 void spawnEnemy(sf::Clock& clock, std::vector<enemy>& enemies){
-    if (clock.getElapsedTime().asSeconds() > 2.0f){
-           
+    auto seed = std::chrono::system_clock::now().time_since_epoch().count();
+    std::default_random_engine generator(seed);
+    auto die = bind(std::uniform_real_distribution<float>{1.0,50.0}, generator);
+    float random_time = die();
+    if (clock.getElapsedTime().asSeconds() > random_time){
         if (!enemies[nextEnemy].exists){
             std::cout << "spawning an enemy " << nextEnemy << "\n";
             
@@ -50,6 +57,7 @@ void spawnEnemy(sf::Clock& clock, std::vector<enemy>& enemies){
 
 int main(int, char const**)
 {
+    
     // Create the main window
     sf::RenderWindow window(sf::VideoMode(1600, 1200), "Window");
     window.setFramerateLimit(60);
@@ -170,7 +178,7 @@ int main(int, char const**)
                 for (int j = 0; j < 10; j++)
                 {
                     if (enemies[j].exists){
-                        tampons[i].collide(enemies[j]);
+                        tampons[i].checkCollision(enemies[j]);
                     }
                 }
                 tampons[i].move(10,0);
