@@ -22,6 +22,7 @@
 #include "girl.hpp"
 #include "tampon.hpp"
 #include "enemy.hpp"
+#include "cloud.hpp"
 #include <ctime>        // std::time
 #include <cstdlib>      // std::rand, std::srand
 #include <random>
@@ -29,11 +30,14 @@
 
 int nextTampon = 0;
 int nextEnemy = 0;
+int nextCloud = 0;
 int score = 10;
 
 sf::RectangleShape drawFloor();
 sf::RectangleShape drawSky();
 
+
+void spawnClouds(sf::Clock& clock, std::vector<cloud>& clouds);
 
 
 void spawnEnemy(sf::Clock& clock, std::vector<enemy>& enemies){
@@ -91,6 +95,15 @@ int main(int, char const**)
         enemies.push_back(enemy(enemy_texture));
     }
     
+    sf::Texture cloud_texture;
+    if (!cloud_texture.loadFromFile(resourcePath() + "enemy.png")) {
+        return EXIT_FAILURE;
+    }
+    
+    std::vector<cloud> clouds;
+    for (int i = 0; i < 4 ; i++){
+        clouds.push_back(cloud(cloud_texture));
+    }
     
 
     
@@ -126,6 +139,7 @@ int main(int, char const**)
         player.animate(clock);
         
         spawnEnemy(clock3, enemies);
+        spawnClouds(clock3, clouds);
 
         sf::Event event; //called when an event (mouse over, click, whatver) happens
         while (window.pollEvent(event))
@@ -198,6 +212,17 @@ int main(int, char const**)
             
         }
         
+        for (int i = 0; i < 4; i++)
+        {
+            if (clouds[i].exists){
+                window.draw(clouds[i].sprite);
+                //std::cout << enemies[i].speed << std::endl;
+                clouds[i].move(-2,0);
+                clouds[i].animate(clock2);
+            }
+            
+        }
+        
         // Draw the sprite
         window.draw(player.sprite);
         
@@ -229,4 +254,21 @@ sf::RectangleShape drawSky(){
     bg.setFillColor(sf::Color::Color(100,100,100,255));
     bg.setPosition(0, 0);
     return bg;
+}
+
+void spawnClouds(sf::Clock& clock, std::vector<cloud>& clouds){
+    if (clock.getElapsedTime().asSeconds() > 3.0){
+        if (!clouds[nextCloud].exists){
+            //std::cout << "spawning an enemy " << nextEnemy << "\n";
+            
+            clouds[nextCloud].appear();
+            if (nextCloud == clouds.size()-1){
+                //std::cout << "setting nextEnemy to 0\n";
+                nextCloud = 0;
+            } else {
+                nextCloud++;
+            }
+        }
+        clock.restart();
+    }
 }

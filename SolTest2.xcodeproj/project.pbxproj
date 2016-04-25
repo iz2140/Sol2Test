@@ -29,6 +29,7 @@
 		030972571CCAC2CE003385B3 /* ammo.png in Resources */ = {isa = PBXBuildFile; fileRef = 030972561CCAC2CE003385B3 /* ammo.png */; };
 		03FD52C21CCDC9BD0020E7A8 /* enemy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03FD52C01CCDC9BD0020E7A8 /* enemy.cpp */; };
 		03FD52C41CCDCE1E0020E7A8 /* enemy.png in Resources */ = {isa = PBXBuildFile; fileRef = 03FD52C31CCDCE1E0020E7A8 /* enemy.png */; };
+		03FD52C91CCEC1510020E7A8 /* cloud.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03FD52C71CCEC1510020E7A8 /* cloud.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -123,6 +124,8 @@
 		03FD52C01CCDC9BD0020E7A8 /* enemy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = enemy.cpp; sourceTree = "<group>"; };
 		03FD52C11CCDC9BD0020E7A8 /* enemy.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = enemy.hpp; sourceTree = "<group>"; };
 		03FD52C31CCDCE1E0020E7A8 /* enemy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enemy.png; sourceTree = "<group>"; };
+		03FD52C71CCEC1510020E7A8 /* cloud.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cloud.cpp; sourceTree = "<group>"; };
+		03FD52C81CCEC1510020E7A8 /* cloud.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = cloud.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +168,8 @@
 				030970E81CBD619D003385B3 /* main.cpp */,
 				030972501CCA872A003385B3 /* girl.cpp */,
 				030972511CCA872A003385B3 /* girl.hpp */,
+				03FD52C71CCEC1510020E7A8 /* cloud.cpp */,
+				03FD52C81CCEC1510020E7A8 /* cloud.hpp */,
 				030972531CCA9ECB003385B3 /* tampon.cpp */,
 				030972541CCA9ECB003385B3 /* tampon.hpp */,
 				03FD52C01CCDC9BD0020E7A8 /* enemy.cpp */,
@@ -478,6 +483,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				030972551CCA9ECB003385B3 /* tampon.cpp in Sources */,
+				03FD52C91CCEC1510020E7A8 /* cloud.cpp in Sources */,
 				0309713F1CBD62DE003385B3 /* README.md in Sources */,
 				030970E91CBD619D003385B3 /* main.cpp in Sources */,
 				030971DA1CBD641D003385B3 /* Makefile in Sources */,
