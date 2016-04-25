@@ -29,6 +29,7 @@
 		030972571CCAC2CE003385B3 /* ammo.png in Resources */ = {isa = PBXBuildFile; fileRef = 030972561CCAC2CE003385B3 /* ammo.png */; };
 		03FD52C21CCDC9BD0020E7A8 /* enemy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03FD52C01CCDC9BD0020E7A8 /* enemy.cpp */; };
 		03FD52C41CCDCE1E0020E7A8 /* enemy.png in Resources */ = {isa = PBXBuildFile; fileRef = 03FD52C31CCDCE1E0020E7A8 /* enemy.png */; };
+		03FD52C61CCE8EF00020E7A8 /* config.lua in Resources */ = {isa = PBXBuildFile; fileRef = 03FD52C51CCE8EF00020E7A8 /* config.lua */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -123,6 +124,7 @@
 		03FD52C01CCDC9BD0020E7A8 /* enemy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = enemy.cpp; sourceTree = "<group>"; };
 		03FD52C11CCDC9BD0020E7A8 /* enemy.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = enemy.hpp; sourceTree = "<group>"; };
 		03FD52C31CCDCE1E0020E7A8 /* enemy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enemy.png; sourceTree = "<group>"; };
+		03FD52C51CCE8EF00020E7A8 /* config.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = config.lua; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 				030972541CCA9ECB003385B3 /* tampon.hpp */,
 				03FD52C01CCDC9BD0020E7A8 /* enemy.cpp */,
 				03FD52C11CCDC9BD0020E7A8 /* enemy.hpp */,
+				03FD52C51CCE8EF00020E7A8 /* config.lua */,
 				030970EA1CBD619D003385B3 /* Resources */,
 				030970E31CBD619D003385B3 /* Supporting Files */,
 			);
@@ -441,6 +444,7 @@
 				030971D81CBD641D003385B3 /* lua.1 in Resources */,
 				03FD52C41CCDCE1E0020E7A8 /* enemy.png in Resources */,
 				030970F01CBD619D003385B3 /* sansation.ttf in Resources */,
+				03FD52C61CCE8EF00020E7A8 /* config.lua in Resources */,
 				0309713E1CBD62DE003385B3 /* LICENSE_1_0.txt in Resources */,
 				0309724F1CC2E4C9003385B3 /* girlWalk.png in Resources */,
 				030972571CCAC2CE003385B3 /* ammo.png in Resources */,

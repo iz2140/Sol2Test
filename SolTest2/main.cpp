@@ -23,13 +23,26 @@
 #include "tampon.hpp"
 #include "enemy.hpp"
 
+int numTampons;
+int numEnemies;
 int nextTampon = 0;
 int nextEnemy = 0;
 int score = 10;
 
+//UI constants
+float WINDOW_WIDTH;
+float WINDOW_HEIGHT;
+int MAX_FRAME_RATE;
+
+//resource names
+std::string AMMO_IMG;
+std::string ENEMY_IMG;
+
+
+//forward declarations
+void loadLuaConfig();
 void spawnEnemy(sf::Clock& clock, std::vector<enemy>& enemies){
     if (clock.getElapsedTime().asSeconds() > 2.0f){
-           
         if (!enemies[nextEnemy].exists){
             std::cout << "spawning an enemy " << nextEnemy << "\n";
             
@@ -50,6 +63,7 @@ void spawnEnemy(sf::Clock& clock, std::vector<enemy>& enemies){
 
 int main(int, char const**)
 {
+    
     // Create the main window
     sf::RenderWindow window(sf::VideoMode(1600, 1200), "Window");
     window.setFramerateLimit(60);
@@ -80,9 +94,6 @@ int main(int, char const**)
     for (int i = 0; i < 10 ; i++){
         enemies.push_back(enemy(enemy_texture));
     }
-    
-    
-
     
 
     // Set the Icon
@@ -170,7 +181,11 @@ int main(int, char const**)
                 for (int j = 0; j < 10; j++)
                 {
                     if (enemies[j].exists){
-                        tampons[i].collide(enemies[j]);
+                        if (tampons[i].checkCollision(enemies[j])){
+                            score += 10;
+                            std::cout << "you scored! " << score << std::endl;
+                        }
+                        
                     }
                 }
                 tampons[i].move(10,0);
@@ -197,9 +212,23 @@ int main(int, char const**)
         window.display();
     }
     
+    
+    return EXIT_SUCCESS;
+}
+
+void loadLuaConfig(){
     sol::state lua;
     lua.open_libraries( sol::lib::base );
     
-    lua.script( "print('bark bark bark!')" );
-    return EXIT_SUCCESS;
+    //lua.script( "print('bark bark bark!')" );
+    lua.script_file("config.lua");
+    numTampons = lua["game"]["tampons"];
+    numEnemies = lua["game"]["enemies"];
+    WINDOW_WIDTH = lua["window"]["width"];
+    WINDOW_HEIGHT = lua["window"]["height"];
+    MAX_FRAME_RATE = lua["window"]["frameRateLimit"];
+    
+    std::cout << numTampons << std::endl;
+
+    
 }
