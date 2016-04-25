@@ -45,7 +45,7 @@ sf::FloatRect cloud::getRect(){
 }
 
 void cloud::appear(){
-    sprite.setPosition(1600,600);
+    sprite.setPosition(1600,400);
     exists = true;
 }
 
@@ -57,7 +57,7 @@ void cloud::destroy(){
 
 void cloud::move(float a, float b){
     sprite.move(a, b);
-    if (sprite.getPosition().x < 0){
+    if (sprite.getPosition().x < -sprite.getLocalBounds().width){
         this->destroy();
     }
 }

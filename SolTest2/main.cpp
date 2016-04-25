@@ -131,6 +131,8 @@ int main(int, char const**)
     
     sf::Clock clock3;
     
+    sf::Clock cloudClock;
+    
     // Start the game loop
     while (window.isOpen())
     {
@@ -139,7 +141,7 @@ int main(int, char const**)
         player.animate(clock);
         
         spawnEnemy(clock3, enemies);
-        spawnClouds(clock3, clouds);
+        spawnClouds(cloudClock, clouds);
 
         sf::Event event; //called when an event (mouse over, click, whatver) happens
         while (window.pollEvent(event))
@@ -257,7 +259,7 @@ sf::RectangleShape drawSky(){
 }
 
 void spawnClouds(sf::Clock& clock, std::vector<cloud>& clouds){
-    if (clock.getElapsedTime().asSeconds() > 3.0){
+    if (clock.getElapsedTime().asSeconds() > 6.0){
         if (!clouds[nextCloud].exists){
             //std::cout << "spawning an enemy " << nextEnemy << "\n";
             
