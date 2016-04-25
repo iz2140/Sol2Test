@@ -64,7 +64,7 @@ void tampon::animate(sf::Clock& clock){
 
 
 void tampon::shoot(){
-    sprite.setPosition(600,600);
+    sprite.setPosition(410,750);
     exists = true;
     //sprite.move(1.0, 0);
     //clock.restart();

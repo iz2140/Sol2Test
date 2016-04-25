@@ -70,7 +70,7 @@ int main(int, char const**)
     sf::RectangleShape floor = drawFloor();
     sf::RectangleShape sky = drawSky();
     
-    girl player = girl(800, 600);
+    girl player = girl(400, 750);
     
     sf::Texture texture;
     if (!texture.loadFromFile(resourcePath() + "ammo.png")) {

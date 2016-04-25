@@ -17,7 +17,7 @@
 enemy::enemy(sf::Texture &texture){
     auto seed = std::chrono::system_clock::now().time_since_epoch().count();
     std::default_random_engine generator(seed);
-    auto die = bind(std::uniform_int_distribution<>{5,50}, generator);
+    auto die = bind(std::uniform_int_distribution<>{5,20}, generator);
     speed = die();
     
     sf::IntRect myRectSourceSprite(0,0,55,60);
@@ -54,7 +54,7 @@ sf::FloatRect enemy::getRect(){
 }
 
 void enemy::appear(){
-    sprite.setPosition(1600,600);
+    sprite.setPosition(1600,750);
     exists = true;
 }
 
