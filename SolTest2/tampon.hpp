@@ -31,7 +31,7 @@ public:
     void shoot();
     void move(float a, float b);
     void destroy();
-    void collide(enemy& enemy);
+    bool collide(enemy& enemy);
     sf::FloatRect getRect();
 };
 

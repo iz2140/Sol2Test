@@ -50,10 +50,12 @@ void tampon::shoot(){
     //clock.restart();
 }
 
-void tampon::collide(enemy& enemy) {
+bool tampon::collide(enemy& enemy) {
     if (sprite.getGlobalBounds().intersects(enemy.sprite.getGlobalBounds())){
         this->destroy();
+        return true;
     }
+    return false;
 }
 
 sf::FloatRect tampon::getRect(){

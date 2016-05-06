@@ -183,7 +183,7 @@ int main(int, char const**)
                 for (int j = 0; j < 10; j++)
                 {
                     if (enemies[j].exists){
-                        if (tampons[i].checkCollision(enemies[j])){
+                        if (tampons[i].collide(enemies[j])){
                             score += 10;
                             std::cout << "you scored! " << score << std::endl;
                         }
