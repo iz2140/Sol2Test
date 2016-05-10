@@ -1,6 +1,6 @@
 # Sol2Test
 
-This is a demonstration project for the Sol library. See the "UsingSol" branch to compare it with master.
+This is a demonstration project for the Sol library. See the "UsingSol" branch to compare it with master. This is a side-scroller based on a volunteer project for a client that was based in Lua using CoronaSDK. The basic idea of the game is that the player would control a protagonist on the screen that can shoot bullets. Enemies will randomly generate and move in different speeds towards the protagonist. When a bullet hits an enemy, that counts as collision detection and both enemy and bullet disappear. 
 
 To build the Demo Project, you must have Xcode installed with SFML, Lua, and set the linker flags, build settings, architecture, etc as appropriate.
 
